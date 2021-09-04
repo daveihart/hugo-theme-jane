@@ -8,6 +8,7 @@
       {{ end }}
       <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h1>
+    <img{{ with .Params.featured_image }} src="{{ . }}"{{ end }} alt="{{ .Title }}">
     {{ partial "post/i18nlist.html" . }}
     <div class="post-meta">
       <time datetime="{{ .Date.Format "2006-01-02" }}" class="post-time">
